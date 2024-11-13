@@ -1,7 +1,12 @@
 interface SquareProps {
-    value: number;
+  value: string;
+  onSquareClick: () => void;
 }
 
-export const Square = ({ value }: SquareProps) => {
-    return <button className="square">{value}</button>
-}
+export const Square = ({ value, onSquareClick }: SquareProps) => {
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
+  );
+};
